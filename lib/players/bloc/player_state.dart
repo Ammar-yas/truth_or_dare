@@ -1,19 +1,19 @@
 import 'package:equatable/equatable.dart';
 import 'package:truthordare/players/player.dart';
 
-class PlayerState extends Equatable {
+class PlayersState extends Equatable {
   @override
   List<Object> get props => [];
 }
 
-class PlayerStateLoadInProgress extends PlayerState {}
+class PlayerStateLoadInProgress extends PlayersState {}
 
-class PlayerStateLoadFailed extends PlayerState {}
+class PlayerStateLoadFailed extends PlayersState {}
 
-class PlayerStateLoadSuccess extends PlayerState {
+class PlayersStateLoadSuccess extends PlayersState {
   final List<Player> players;
 
-  PlayerStateLoadSuccess(this.players);
+  PlayersStateLoadSuccess(this.players);
 
   @override
   List<Object> get props => [players];

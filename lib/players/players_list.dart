@@ -8,11 +8,12 @@ import 'package:truthordare/players/player.dart';
 class PlayersList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<PlayersBloc, PlayerState>(builder: (context, state) {
-      if (state is PlayerStateLoadInProgress) return LoadingIndicator();
-      if (state is PlayerStateLoadSuccess)
+    BlocProvider.of<PlayersBloc>(context).add(GetAllPlayersEvent());
+    return BlocBuilder<PlayersBloc, PlayersState>(builder: (context, state) {
+      if (state is PlayersStateLoadSuccess)
         return PlayersListView(players: state.players);
-      return null; //TODO should be removed
+      else
+        return LoadingIndicator();
     });
   }
 }

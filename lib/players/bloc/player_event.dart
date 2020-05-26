@@ -30,3 +30,5 @@ class RemovePlayerEvent extends PlayerEvent {
   @override
   List<Object> get props => [position];
 }
+
+class GetAllPlayersEvent extends PlayerEvent {}

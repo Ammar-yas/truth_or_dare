@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:truthordare/players/bloc/player_bloc_barrel.dart';
 import 'package:truthordare/players/player.dart';
 import 'package:truthordare/players/players_list.dart';
+import 'package:truthordare/select_challenge/select_challenge_screen.dart';
 
 class PlayersScreen extends StatelessWidget {
   static const String id = "PlayerScreen";
@@ -33,7 +34,13 @@ class PlayersScreen extends StatelessWidget {
               ),
             ),
             RaisedButton(
-              onPressed: () => {Navigator.pushNamed(context, PlayersScreen.id)},
+              onPressed: () => {
+                Navigator.pushNamed(
+                  context,
+                  SelectChallengeScreen.id,
+                  arguments: 0,
+                )
+              },
               textColor: Colors.white,
               color: Colors.red,
               child: Container(

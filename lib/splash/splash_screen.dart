@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:truthordare/truth_or_dare/truth_or_dare_screen.dart';
+import 'package:truthordare/players/players_screen.dart';
 
 class SplashScreen extends StatelessWidget {
   static const String id = "SplashScreen";
@@ -9,7 +9,7 @@ class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Timer(Duration(milliseconds: 1500),
-        () => {Navigator.pushReplacementNamed(context, TruthOrDareScreen.id)});
+        () => {Navigator.pushReplacementNamed(context, PlayersScreen.id)});
     return SafeArea(
       child: Scaffold(
         body: Container(
