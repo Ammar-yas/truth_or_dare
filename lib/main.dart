@@ -8,6 +8,7 @@ import 'package:truthordare/players/bloc/player_bloc_barrel.dart';
 import 'package:truthordare/players/players_screen.dart';
 import 'package:truthordare/select_challenge/select_challenge_screen.dart';
 import 'package:truthordare/splash/splash_screen.dart';
+import 'package:truthordare/truth_or_dare/truth_or_dare_screen.dart';
 
 void main() {
   Crashlytics.instance.enableInDevMode = true;
@@ -36,6 +37,7 @@ class MyApp extends StatelessWidget {
           SplashScreen.id: (context) => SplashScreen(),
           PlayersScreen.id: (context) => PlayersScreen(),
           SelectChallengeScreen.id: (context) => SelectChallengeScreen(),
+          TruthOrDareScreen.id: (context) => TruthOrDareScreen(),
         },
         initialRoute: SplashScreen.id,
         debugShowCheckedModeBanner: false,
